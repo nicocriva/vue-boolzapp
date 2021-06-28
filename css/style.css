@@ -57,7 +57,7 @@ aside{
 /*-----sezione header-----*/
 header{
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: #eaeaea;
     border-left: 1px solid lightgrey;
     padding: 0 10px;
@@ -65,7 +65,7 @@ header{
 
 .contenuto-header, .header-left, .header-right{
     display: flex;
-    height: 80px;
+    height: 70px;
     align-items: center;
 }
 
@@ -155,6 +155,11 @@ header{
     height: calc(100% - 50px - 80px - 80px);
 }
 
+#chat-contatti a{
+    color: black;
+    text-decoration: none;
+}
+
 .chat{
     display: flex;
     height: 70px;
@@ -176,7 +181,51 @@ header{
 
 /*-----messaggi-----*/
 #messaggi{
-    height: calc(100% - 80px);
+    height: calc(100% - 140px);
     overflow-y: scroll;
+    padding: 0 20px;
 }
 
+/*-------footer-------*/
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: #eaeaea;
+}
+
+#sezione-risposta{
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sezione-risposta a{
+    color: grey;
+    font-size: 22px;
+    margin: 0 20px;
+}
+
+#sezione-risposta input{
+    width: 100%;
+    height: 80%;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    padding: 0 10px;
+}
+
+
+
+
+
+
+
+/*------media query-----*/
+@media screen and (min-height: 200px){
+    #messaggi{
+        padding: 20px;
+    }
+}
