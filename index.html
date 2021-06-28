@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>Boolzap</title>
 </head>
@@ -22,11 +25,27 @@
             <!--colonna di sinistra-->
             <aside>
                 <header>
-
+                    <div class="contenuto-header">
+                        <div class="header-left">
+                            <img src="img-s/pro-pic.jpg" alt="profile picture">
+                            <a href="#">Doggo</a>
+                        </div>
+                        <div class="header-right">
+                            <a href="#"><i class="fas fa-circle-notch"></i></a>
+                            <a href="#"><i class="fas fa-comment-alt"></i></a>
+                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                        </div>
+                    </div>
                 </header>
 
                 <div id="avviso-notifiche">
-
+                    <span id="campanella">
+                        <i class="fas fa-bell-slash"></i>
+                    </span>
+                    <div id="testo-notifiche">
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
                 </div>
 
                 <!--sezione di ricerca messaggi-->
@@ -37,6 +56,35 @@
                 <!--tutte le chat-->
                 <main id="chat-contatti">
 
+                    <div class="chat">
+                        <img src="img-s/41tKs-+D6aL._SX331_BO1,204,203,200_.jpg" alt="">
+                        <div>
+                            <div>Doggo</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <img src="img-s/5ca65e68-9452-43e5-a83b-1762864b9ecd.jpg" alt="">
+                        <div>
+                            <div>Doggo</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <img src="img-s/avatars-000103501656-iji6a5-t500x500.jpg" alt="">
+                        <div>
+                            <div>Doggo</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="chat">
+                        <img src="img-s/4t0m5.jpg" alt="">
+                        <div>
+                            <div>Doggo</div>
+                            <div></div>
+                        </div>
+                    </div>
+                
                 </main>
             </aside>
 
@@ -59,6 +107,9 @@
 
         </div>
     </div>
+
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

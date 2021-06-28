@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 #app{
@@ -22,7 +23,7 @@
     background-color: #dbdbd3;
 }
 
-/*-----finestra messaggi-----*/
+/*-----container-----*/
 #container{
     position: absolute;
     top: 50%;
@@ -31,4 +32,112 @@
     height: 95vh;
     width: 80%;
     background-color: #fff;
+}
+
+#container::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+aside{
+    float: left;
+    width: 420px;
+    height: 100%;
+}
+
+#chat-visualizzata{
+    float: left;
+    width: calc(100% - 420px);
+    height: 100%;
+    background-color: rgba(197, 243, 155, 0.801);
+}
+
+/*-----sezione header-----*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #eaeaea;
+    border-left: 1px solid lightgrey;
+    padding: 0 10px;
+}
+
+.contenuto-header, .header-left, .header-right{
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+.contenuto-header{
+    justify-content: space-between;
+}
+
+.contenuto-header *{
+    margin: 0 5px;
+}
+
+.header-left img{
+    height: 75%;
+    border-radius: 50%;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-right *{
+    font-size: 22px;
+    color: grey;
+}
+
+/*-----avviso notifica-----*/
+#avviso-notifiche{
+    width: 100%;
+    height: 80px;
+    background-color: #8ad3f1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#campanella{
+    color: #8ad3f1;
+    font-size: 25px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+#testo-notifiche{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#testo-notifiche a {
+    font-size: 14px;
+    color: black;
+    font-weight: initial;
+}
+
+/*-----barra di ricerca messaggi-----*/
+#barra-ricerca{
+    width: 100%;
+    height: 50px;
+    background-color: #eaeaea;
+}
+
+/*-----chat-----*/
+.chat{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+}
+
+.chat img{
+    height: 75%;
+    border-radius: 50%;
+    margin: 0 20px;
 }
