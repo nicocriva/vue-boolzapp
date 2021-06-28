@@ -32,6 +32,7 @@
     height: 95vh;
     width: 80%;
     background-color: #fff;
+    overflow: hidden;
 }
 
 #container::after{
@@ -50,7 +51,7 @@ aside{
     float: left;
     width: calc(100% - 420px);
     height: 100%;
-    background-color: rgba(197, 243, 155, 0.801);
+    background-image: url(../img-s/mine.jpg);
 }
 
 /*-----sezione header-----*/
@@ -88,7 +89,7 @@ header{
 
 .header-right *{
     font-size: 22px;
-    color: grey;
+    color: #b1b1b1;
 }
 
 /*-----avviso notifica-----*/
@@ -124,11 +125,36 @@ header{
 /*-----barra di ricerca messaggi-----*/
 #barra-ricerca{
     width: 100%;
-    height: 50px;
+    padding: 5px;
     background-color: #eaeaea;
 }
 
+#contenuto-ricerca{
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    display: flex;
+}
+
+#contenuto-ricerca a .fa-search{
+    font-size: 18px;
+    color: #b1b1b1;
+    padding: 0 20px;
+}
+
+#barra-ricerca div input{
+    width: 100%;
+    border: none;
+    border-left: 1px solid #eaeaea;
+    padding: 10px;
+}
+
 /*-----chat-----*/
+#chat-contatti{
+    overflow-y: scroll;
+    height: calc(100% - 50px - 80px - 80px);
+}
+
 .chat{
     display: flex;
     height: 70px;
@@ -141,3 +167,16 @@ header{
     border-radius: 50%;
     margin: 0 20px;
 }
+
+/*--------sezione chat---------*/
+.ultimo-accesso{
+    font-size: 13px;
+    color: grey;
+}
+
+/*-----messaggi-----*/
+#messaggi{
+    height: calc(100% - 80px);
+    overflow-y: scroll;
+}
+
