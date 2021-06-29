@@ -1,6 +1,7 @@
 const app = new Vue ({
     el: '#app',
     data: {
+        counter: 0,
         contacts: [
             {
                 name: 'Pippo',
@@ -9,17 +10,17 @@ const app = new Vue ({
                 messages: [
                     {
                         date: '10/01/2020 15:30',
-                        text: 'Hai portato a spasso il cane?',
+                        text: 'Portami a spasso',
                         sent: true
                     },
                     {
                         date: '10/01/2020 15:50',
-                        text: 'Ricordati di dargli da mangiare',
+                        text: 'E dammi da mangiare',
                         sent: true
                     },
                     {
                         date: '10/01/2020 16:15',
-                        text: 'Tutto fatto!',
+                        text: 'Subito!',
                     }
                 ],
             },
@@ -81,8 +82,19 @@ const app = new Vue ({
                 ],
             },
         ],
+    },
+    
+    methods: {
+        changeChat(){
+            let deleteChat = document.getElementById('messaggi');
+            let deleteUser = document.getElementById('user-chat');
+            deleteChat.innerHTML = '';
+            deleteUser.innerHTML = '';
+        }
+            
     }
 })
+
 
 
 

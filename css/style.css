@@ -198,6 +198,10 @@ header{
     padding: 0 20px;
 }
 
+.testo-messaggio{
+    overflow-wrap: break-word;
+}
+
 .messaggio-mio, .messaggio-utente{
     padding: 5px 10px 8px;
     border-radius: 10px;
