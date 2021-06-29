@@ -1,26 +1,6 @@
 const app = new Vue ({
     el: '#app',
     data: {
-        // contatti: [
-        //     {
-        //         nome: 'Pippo',
-        //         immagine: 'img-s/41tKs-+D6aL._SX331_BO1,204,203,200_.jpg'
-        //     },
-        //     {
-        //         nome: 'Prince',
-        //         immagine: 'img-s/5ca65e68-9452-43e5-a83b-1762864b9ecd.jpg'
-        //     },
-        //     {
-        //         nome: 'Pablo',
-        //         immagine: 'img-s/avatars-000103501656-iji6a5-t500x500.jpg'
-        //     },
-        //     {
-        //         nome: 'Douge',
-        //         immagine: 'img-s/4t0m5.jpg'
-        //     }
-        // ]
-
-
         contacts: [
             {
                 name: 'Pippo',

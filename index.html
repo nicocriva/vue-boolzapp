@@ -27,7 +27,7 @@
                 <header>
                     <div class="contenuto-header">
                         <div class="header-left">
-                            <img src="img/pro-pic.jpg" alt="profile picture">
+                            <img src="img/avatar_0.jpg" alt="profile picture">
                             <a href="#">Doggo</a>
                         </div>
                         <div class="header-right">
@@ -59,21 +59,21 @@
                 <!--tutte le chat-->
                 <main id="chat-contatti">
                     <a href="#" class="chat" v-for="contact in contacts">
-                        <img :src="'img/avatar' + 'contact.avatar' + '.jpg'" alt="pro pic"> {{contact.name}} 
-                        
+                        <img :src="'img/avatar' + contact.avatar + '.jpg' " alt="pro pic"> 
+                        <div>
+                            {{contact.name}}
+                            <div class="avatar-text">Ultimo messaggio</div>
+                        </div>
                     </a>
-                   
-                
                 </main>
             </aside>
 
             <!--colonna di destra, chat aperta-->
             <div id="chat-visualizzata">
                 <header>
-                
                     <div class="contenuto-header">
                         <div class="header-left">
-                            <img src="img/5ca65e68-9452-43e5-a83b-1762864b9ecd.jpg" alt="">
+                            <img src="img/avatar_2.jpg" alt="pro pic">
                             <div>
                                 <div>Prince</div>
                                 <div class="ultimo-accesso">Ultimo accesso oggi alle</div>
@@ -84,12 +84,23 @@
                             <a href="#"><i class="fas fa-paperclip"></i></a>
                             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
                         </div>
-                    </div>    
-                    
+                    </div>
                 </header>
 
                 <main id="messaggi">
-                    
+                    <!-- <div class="row" v-for="message in contacts.messages">
+                        {{messages.text}}
+                        <span>
+                        </span>
+                    </div> -->
+
+                    <div class="row">
+                        <span class="messaggio-mio"></span>
+                    </div>
+                    <div class="row">
+                        <span class="messaggio-utente"></span>
+                    </div>
+                                        
                 </main>
 
                 <!--sezione scrivi un messaggio-->

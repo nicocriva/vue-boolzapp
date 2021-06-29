@@ -80,7 +80,6 @@ header{
 .header-left img{
     height: 75%;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .header-left a {
@@ -150,7 +149,7 @@ header{
     padding: 10px;
 }
 
-/*-----chat-----*/
+/*-----chat utenti-----*/
 #chat-contatti{
     overflow-y: scroll;
     height: calc(100% - 50px - 80px - 80px);
@@ -159,6 +158,12 @@ header{
 #chat-contatti a{
     color: black;
     text-decoration: none;
+}
+
+.avatar-text{
+    color: grey;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .chat{
@@ -174,7 +179,12 @@ header{
     margin: 0 20px;
 }
 
-/*--------sezione chat---------*/
+/*--------sezione chat visualizzata---------*/
+/*----header----*/
+.header-left{
+    cursor: pointer;
+}
+
 .ultimo-accesso{
     font-size: 13px;
     color: grey;
@@ -187,11 +197,33 @@ header{
     padding: 0 20px;
 }
 
-.ultimo-messaggio{
-    margin-top: 5px;
-    color: grey;
-    font-size: 14px
+.messaggio-mio, .messaggio-utente{
+    padding: 5px 10px 8px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(196, 196, 196);
 }
+
+.row{
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+}
+
+.messaggio-mio{
+    background-color: rgb(206, 255, 170);
+    max-width: 600px;
+    float: right;
+    margin: 5px;
+
+}
+
+.messaggio-utente{
+    background-color: #fff;
+    max-width: 600px;
+    margin: 5px;
+    float: left;
+}
+
 
 /*-------footer-------*/
 footer{
