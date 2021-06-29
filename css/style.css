@@ -88,7 +88,7 @@ header{
 }
 
 .header-right *{
-    font-size: 22px;
+    font-size: 20px;
     color: #b1b1b1;
 }
 
@@ -125,6 +125,7 @@ header{
 /*-----barra di ricerca messaggi-----*/
 #barra-ricerca{
     width: 100%;
+    height: 50px;
     padding: 5px;
     background-color: #eaeaea;
 }
@@ -152,7 +153,7 @@ header{
 /*-----chat utenti-----*/
 #chat-contatti{
     overflow-y: scroll;
-    height: calc(100% - 50px - 80px - 80px);
+    height: calc(100% - 70px - 80px - 50px);
 }
 
 #chat-contatti a{
@@ -163,7 +164,7 @@ header{
 .avatar-text{
     color: grey;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .chat{
@@ -205,23 +206,36 @@ header{
 
 .row{
     width: 100%;
-    height: 40px;
-    padding: 10px 0;
+    height: 55px;
 }
 
 .messaggio-mio{
     background-color: rgb(206, 255, 170);
     max-width: 600px;
     float: right;
-    margin: 5px;
+    margin: 0 5px;
 
 }
 
 .messaggio-utente{
     background-color: #fff;
     max-width: 600px;
-    margin: 5px;
+    margin: 0 5px;
     float: left;
+}
+
+.messaggio-bottom{
+    text-align: end;
+}
+
+.orario, .inviato{
+    margin: 0 2px;
+    font-size: 12px;
+    color: grey;
+}
+
+.orario, .inviato{
+    display: inline-block;
 }
 
 

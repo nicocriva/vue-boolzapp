@@ -88,17 +88,16 @@
                 </header>
 
                 <main id="messaggi">
-                    <!-- <div class="row" v-for="message in contacts.messages">
-                        {{messages.text}}
-                        <span>
+                    <div class="row" v-for="(message, index) in contacts[0].messages">
+                        <span :class=" (message.sent) ? 'messaggio-mio' : 'messaggio-utente' ">
+                            <div>{{message.text}}</div>
+                            <div class="messaggio-bottom">
+                                <div class="orario">{{message.date}}</div>
+                                <div v-if="message.sent" class="inviato">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
                         </span>
-                    </div> -->
-
-                    <div class="row">
-                        <span class="messaggio-mio"></span>
-                    </div>
-                    <div class="row">
-                        <span class="messaggio-utente"></span>
                     </div>
                                         
                 </main>
