@@ -51,7 +51,7 @@ aside{
     float: left;
     width: calc(100% - 420px);
     height: 100%;
-    background-image: url(../img-s/mine.jpg);
+    background-image: url(../img/mine.jpg);
 }
 
 /*-----sezione header-----*/
@@ -80,6 +80,7 @@ header{
 .header-left img{
     height: 75%;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .header-left a {
@@ -184,6 +185,12 @@ header{
     height: calc(100% - 140px);
     overflow-y: scroll;
     padding: 0 20px;
+}
+
+.ultimo-messaggio{
+    margin-top: 5px;
+    color: grey;
+    font-size: 14px
 }
 
 /*-------footer-------*/
