@@ -204,6 +204,7 @@ header{
 }
 
 .testo-messaggio{
+    width: calc(100% - 20px);
     padding-right: 30px;
     overflow-wrap: break-word;
     float: left;
@@ -211,8 +212,9 @@ header{
 
 .arrow-down{
     width: 20px;
-    float: right;
+    float: left;
     color: transparent;
+    cursor: pointer;
 }
 
 .messaggio-mio, .messaggio-utente{
