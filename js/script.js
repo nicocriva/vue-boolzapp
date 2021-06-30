@@ -85,13 +85,9 @@ const app = new Vue ({
     },
     
     methods: {
-        changeChat(){
-            let deleteChat = document.getElementById('messaggi');
-            let deleteUser = document.getElementById('user-chat');
-            deleteChat.innerHTML = '';
-            deleteUser.innerHTML = '';
+        changeChat(index){
+            this.counter = index;
         }
-            
     }
 })
 
