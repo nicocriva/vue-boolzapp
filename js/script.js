@@ -2,7 +2,7 @@ const app = new Vue ({
     el: '#app',
     data: {
         counter: 0,
-        newMessage: [],
+        newMessage: '',
         contacts: [
             {
                 name: 'Pippo',
@@ -20,7 +20,7 @@ const app = new Vue ({
                         sent: true
                     },
                     {
-                        date: '10/01/2020 16:15',
+                        date: '10/01/2020      16:15',
                         text: 'Subito!',
                     }
                 ],
@@ -90,9 +90,14 @@ const app = new Vue ({
             this.counter = index;
         },
         submit(){
-            if(!this.newMessage == ""){
-                this.contacts.push(this.newMessage)
+            if(!this.newMessage == 0){
+                this.contacts[this.counter].messages.push({
+                    date: '10/01/2020 18:00',
+                    text: this.newMessage,
+                    sent: true
+                })
             }
+            this.newMessage = ''
         }
     }
 })
