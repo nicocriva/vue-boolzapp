@@ -90,28 +90,26 @@ const app = new Vue ({
             this.counter = index;
         },
         submit(){
+            let date = new Date();
             if(!this.newMessage == ''){
                 this.contacts[this.counter].messages.push({
-                    date: '10/01/2020 18:00',
+                    date: dayjs().date() + '/' + (dayjs().month()+1) + '/' + dayjs().year() + ' ' + dayjs().hour() + ':' + dayjs().minute(),
                     text: this.newMessage,
                     sent: true,
                 })
             }
             this.newMessage = '';
 
-
             setTimeout(myFunction, 1000);
             function myFunction(){
                 if(this.newMessage != ''){
                     app.contacts[app.counter].messages.push({
-                        date: '10/01/2020 18:00',
+                        date: dayjs().date() + '/' + (dayjs().month()+1) + '/' + dayjs().year() + ' ' + dayjs().hour() + ':' + dayjs().minute(),
                         text: 'Okay',
                     })
                 }   
-            }
-              
+            }     
         }
-
     }
 })
 

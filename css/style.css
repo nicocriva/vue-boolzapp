@@ -204,7 +204,15 @@ header{
 }
 
 .testo-messaggio{
+    padding-right: 30px;
     overflow-wrap: break-word;
+    float: left;
+}
+
+.arrow-down{
+    width: 20px;
+    float: right;
+    color: transparent;
 }
 
 .messaggio-mio, .messaggio-utente{
@@ -212,6 +220,15 @@ header{
     border-radius: 10px;
     border-bottom: 1px solid rgb(196, 196, 196);
 }
+
+.messaggio-mio:hover .arrow-down{
+    color: rgb(117, 117, 117);
+}
+
+.messaggio-utente:hover .arrow-down{
+    color: rgb(117, 117, 117);
+}
+
 
 .row{
     width: 100%;

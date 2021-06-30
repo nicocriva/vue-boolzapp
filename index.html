@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
     <title>Boolzap</title>
 </head>
 <body>
@@ -92,6 +95,7 @@
                     <div class="row" v-for="(message, index) in contacts[counter].messages">
                         <span :class=" (message.sent) ? 'messaggio-mio' : 'messaggio-utente' ">
                             <div class="testo-messaggio">{{message.text}}</div>
+                            <div class="arrow-down"><i class="fas fa-chevron-down"></i></div>
                             <div class="messaggio-bottom">
                                 <div class="orario">{{message.date}}</div>
                                 <div v-if="message.sent" class="inviato">
