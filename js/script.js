@@ -2,6 +2,7 @@ const app = new Vue ({
     el: '#app',
     data: {
         counter: 0,
+        newMessage: [],
         contacts: [
             {
                 name: 'Pippo',
@@ -87,10 +88,14 @@ const app = new Vue ({
     methods: {
         changeChat(index){
             this.counter = index;
+        },
+        submit(){
+            if(!this.newMessage == ""){
+                this.contacts.push(this.newMessage)
+            }
         }
     }
 })
-
 
 
 

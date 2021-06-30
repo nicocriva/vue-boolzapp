@@ -107,7 +107,7 @@
                 <footer>
                     <div id="sezione-risposta">
                         <a href="#"><i class="far fa-grin-alt"></i></a>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="submit">
                         <a href="#"><i class="fas fa-microphone"></i></a>
                     </div>
                 </footer>
