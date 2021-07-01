@@ -178,11 +178,18 @@ header{
     background-color: rgb(231, 231, 231);
 }
 
-
 .chat img{
     height: 75%;
     border-radius: 50%;
     margin: 0 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
 }
 
 /*--------sezione chat visualizzata---------*/
@@ -230,7 +237,6 @@ header{
 .messaggio-utente:hover .arrow-down{
     color: rgb(117, 117, 117);
 }
-
 
 .row{
     width: 100%;

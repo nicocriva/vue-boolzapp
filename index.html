@@ -55,13 +55,13 @@
                 <nav id="barra-ricerca">
                     <div id="contenuto-ricerca">
                         <a href="#"><i class="fas fa-search"></i></a>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" v-model="searchUser" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </nav>
 
                 <!--tutte le chat-->
                 <main id="chat-contatti">
-                    <a href="#" class="chat" v-for="(contact,index) in contacts" @click="changeChat(index)">
+                    <a href="#" class="chat" v-for="(contact,index) in filterChat" @click="changeChat(index)">
                         <!-- {{index}} -->
                         <img :src="'img/avatar' + contact.avatar + '.jpg' " alt="pro pic"> 
                         <div>
@@ -93,7 +93,7 @@
 
                 <main id="messaggi">
                     <div class="row" v-for="(message, index) in contacts[counter].messages">
-                        <span :class=" (message.sent) ? 'messaggio-mio' : 'messaggio-utente' ">
+                        <span :class=" (message.sent) ? 'messaggio-mio' : 'messaggio-utente'">
                             <div class="testo-messaggio">{{message.text}}</div>
                             <div class="arrow-down"><i class="fas fa-chevron-down"></i></div>
                             <div class="messaggio-bottom">

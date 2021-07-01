@@ -3,6 +3,7 @@ const app = new Vue ({
     data: {
         counter: 0,
         newMessage: '',
+        searchUser: '',
         contacts: [
             {
                 name: 'Pippo',
@@ -89,8 +90,9 @@ const app = new Vue ({
         changeChat(index){
             this.counter = index;
         },
+
         submit(){
-            let date = new Date();
+            new Date();
             if(!this.newMessage == ''){
                 this.contacts[this.counter].messages.push({
                     date: dayjs().date() + '/' + (dayjs().month()+1) + '/' + dayjs().year() + ' ' + dayjs().hour() + ':' + dayjs().minute(),
@@ -108,19 +110,24 @@ const app = new Vue ({
                         text: 'Okay',
                     })
                 }   
-            }     
-        }
+            }
+        },
+    },
+
+    computed:{
+        filterChat(){
+            let search = this.searchUser;
+            search = search.charAt(0).toUpperCase() + search.substring(1).toLowerCase();
+            if(search == ''){
+                return this.contacts
+            } else {
+                return this.contacts.filter(contatto => {
+                    if(contatto.name.includes(search)){
+                        return true
+                    }
+                })
+            }
+        },
     }
+    
 })
-
-
-
-
-
-
-
-
-
-
-
-
