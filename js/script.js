@@ -112,17 +112,20 @@ const app = new Vue ({
                 }   
             }
         },
+
     },
+
 
     computed:{
         filterChat(){
-            let search = this.searchUser;
-            search = search.charAt(0).toUpperCase() + search.substring(1).toLowerCase();
-            if(search == ''){
+            
+            if(this.searchUser == ''){
                 return this.contacts
             } else {
                 return this.contacts.filter(contatto => {
-                    if(contatto.name.includes(search)){
+                    if(contatto.name.toLowerCase().includes(this.searchUser)){
+                        return true
+                    } else if (contatto.name.includes(this.searchUser)){
                         return true
                     }
                 })

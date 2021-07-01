@@ -184,14 +184,6 @@ header{
     margin: 0 20px;
 }
 
-.hidden{
-    display: none;
-}
-
-.show{
-    display: block;
-}
-
 /*--------sezione chat visualizzata---------*/
 /*----header----*/
 .header-left{
