@@ -84,6 +84,7 @@ const app = new Vue ({
                 ],
             },
         ],
+        answer: ['No', 'Sì', 'Forse', 'Ciao', 'A domani', 'Non saprei', 'Addio', 'Ti voglio bene', 'Mollami']
     },
     
     methods: {
@@ -99,18 +100,17 @@ const app = new Vue ({
                     text: this.newMessage,
                     sent: true,
                 })
+                setTimeout(myFunction, 1000);
+                let randomAnswer = Math.floor(Math.random() * app.answer.length);
+                function myFunction(){
+                    app.contacts[app.counter].messages.push({
+                        date: dayjs().date() + '/' + (dayjs().month()+1) + '/' + dayjs().year() + ' ' + dayjs().hour() + ':' + dayjs().minute(),
+                        text: app.answer[randomAnswer],
+                    })   
+                }
             }
             this.newMessage = '';
 
-            setTimeout(myFunction, 1000);
-            function myFunction(){
-                if(this.newMessage != ''){
-                    app.contacts[app.counter].messages.push({
-                        date: dayjs().date() + '/' + (dayjs().month()+1) + '/' + dayjs().year() + ' ' + dayjs().hour() + ':' + dayjs().minute(),
-                        text: 'Okay',
-                    })
-                }   
-            }
         },
 
     },
