@@ -30,8 +30,8 @@
                 <header>
                     <div class="contenuto-header">
                         <div class="header-left">
-                            <img src="img/avatar_0.jpg" alt="profile picture">
-                            <a href="#">Doggo</a>
+                            <img src="img/avatar_0.png" alt="profile picture">
+                            <a href="#">Luca</a>
                         </div>
                         <div class="header-right">
                             <a href="#"><i class="fas fa-circle-notch"></i></a>
@@ -63,7 +63,7 @@
                 <main id="chat-contatti">
                     <a href="#" class="chat" v-for="(contact,index) in filterChat" @click="changeChat(index)">
                         <!-- {{index}} -->
-                        <img :src="'img/avatar' + contact.avatar + '.jpg' " alt="pro pic"> 
+                        <img :src="'img/avatar' + contact.avatar + '.png' " alt="pro pic"> 
                         <div>
                             {{contact.name}}
                             <div class="avatar-text">Ultimo messaggio</div>
@@ -77,7 +77,7 @@
                 <header>
                     <div class="contenuto-header">
                         <div id="user-chat" class="header-left">
-                            <img :src=" 'img/avatar' + contacts[counter].avatar + '.jpg' " :alt="contacts[counter].name">
+                            <img :src=" 'img/avatar' + contacts[counter].avatar + '.png' " :alt="contacts[counter].name">
                             <div>
                                 <div>{{contacts[counter].name}}</div>
                                 <div class="ultimo-accesso">Ultimo accesso oggi alle</div>
@@ -95,7 +95,14 @@
                     <div class="row" v-for="(message, index) in contacts[counter].messages">
                         <span :class=" (message.sent) ? 'messaggio-mio' : 'messaggio-utente'">
                             <div class="testo-messaggio">{{message.text}}</div>
-                            <div class="arrow-down"><i class="fas fa-chevron-down"></i></div>
+                            <div class="arrow-down">
+                                <i class="fas fa-chevron-down">
+                                    <div class="info">
+                                        <div>Info messaggio</div>
+                                        <div @click="deleteMessage">Elimina</div>
+                                    </div>
+                                </i>
+                            </div>
                             <div class="messaggio-bottom">
                                 <div class="orario">{{message.date}}</div>
                                 <div v-if="message.sent" class="inviato">

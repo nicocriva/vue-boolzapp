@@ -214,16 +214,22 @@ header{
     float: left;
     color: transparent;
     cursor: pointer;
+    position: relative;
 }
 
 .messaggio-mio, .messaggio-utente{
     padding: 5px 10px 8px;
+    margin: 0 5px 10px;
     border-radius: 10px;
     border-bottom: 1px solid rgb(196, 196, 196);
 }
 
 .messaggio-mio:hover .arrow-down{
     color: rgb(117, 117, 117);
+}
+
+.arrow-down:hover .info{
+    display: block;
 }
 
 .messaggio-utente:hover .arrow-down{
@@ -239,7 +245,6 @@ header{
     background-color: rgb(206, 255, 170);
     max-width: 600px;
     float: right;
-    margin: 0 5px;
 }
 
 .messaggio-utente{
@@ -258,10 +263,31 @@ header{
 .orario, .inviato{
     margin: 0 2px;
     color: grey;
+    display: inline-block;
 }
 
-.orario, .inviato{
-    display: inline-block;
+.info{
+    width: 130px;
+    color: rgb(43, 43, 43);
+    background-color: rgb(240, 235, 235);
+    position: absolute;
+    right: 10px;
+    display: none;
+    border-radius: 10px;
+}
+
+.info *{
+    padding: 10px 5px;
+}
+
+.info *:hover{
+    background-color: rgb(167, 167, 167);
+    border-radius: 10px;
+}
+
+
+.hidden{
+    display: none;
 }
 
 
@@ -290,6 +316,7 @@ footer{
 #sezione-risposta input{
     width: 100%;
     height: 80%;
+    outline: none;
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid lightgray;
@@ -306,5 +333,15 @@ footer{
 @media screen and (min-height: 200px){
     #messaggi{
         padding: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    aside{
+        width: 40%;
+    }
+
+    #chat-visualizzata{
+        width: 60%;
     }
 }

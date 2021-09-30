@@ -6,28 +6,37 @@ const app = new Vue ({
         searchUser: '',
         contacts: [
             {
-                name: 'Pippo',
+                name: 'Sandra',
                 avatar: '_1',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30',
-                        text: 'Portami a spasso',
+                        text: 'Ciao Sandra, da quanto non ci si vede!',
                         sent: true
                     },
                     {
                         date: '10/01/2020 15:50',
-                        text: 'E dammi da mangiare',
+                        text: 'Giovedì sera ti andrebbe di organizzare un aperitivo?',
                         sent: true
                     },
                     {
                         date: '10/01/2020 16:15',
-                        text: 'Subito!',
-                    }
+                        text: 'Ciao Luca, certo!',
+                    },
+                    {
+                        date: '10/01/2020 16:32',
+                        text: 'Facciamo per le 20?',
+                        sent: true
+                    },
+                    {
+                        date: '10/01/2020 16:38',
+                        text: 'Va bene, allora a sabato!',
+                    },
                 ],
             },
             {
-                name: 'Prince',
+                name: 'Laura',
                 avatar: '_2',
                 visible: true,
                 messages: [
@@ -48,7 +57,7 @@ const app = new Vue ({
                 ],
             },
             {
-                name: 'Pablo',
+                name: 'David',
                 avatar: '_3',
                 visible: true,
                 messages: [
@@ -68,7 +77,7 @@ const app = new Vue ({
                 ],
             },
             {
-                name: 'Doge',
+                name: 'Marco',
                 avatar: '_4',
                 visible: true,
                 messages: [
@@ -84,7 +93,7 @@ const app = new Vue ({
                 ],
             },
         ],
-        answer: ['No', 'Sì', 'Forse', 'Ciao', 'A domani', 'Non saprei', 'Addio', 'Ti voglio bene', 'Mollami']
+        answer: ['No', 'Sì', 'Forse', 'Ciao', 'A domani', 'Non saprei', 'Addio', 'A presto!', 'Ti voglio bene', 'Buonanotte']
     },
     
     methods: {
@@ -110,9 +119,11 @@ const app = new Vue ({
                 }
             }
             this.newMessage = '';
-
         },
 
+        deleteMessage(){
+            this.newMessage.slice(1,1)
+        }
     },
 
 
@@ -123,7 +134,7 @@ const app = new Vue ({
                 return this.contacts
             } else {
                 return this.contacts.filter(contatto => {
-                    if(contatto.name.toLowerCase().includes(this.searchUser)){
+                    if(contatto.name.toLowerCase().includes(this.searchUser.toLowerCase())){
                         return true
                     } else if (contatto.name.includes(this.searchUser)){
                         return true
@@ -133,4 +144,6 @@ const app = new Vue ({
         },
     }
     
+
+
 })
